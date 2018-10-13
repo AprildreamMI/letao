@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐淘-移动端</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+<!--头部-->
+<header class="mui-bar mui-bar-nav my-header">
+    <a href="search.html" class="mui-action-back mui-icon mui-icon-search mui-pull-right"></a>
+    <h1 class="mui-title">传淘云购</h1>
+</header>
+
+<!--主体-->
+<div class="my-content">
+    <div class="leftBox">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="left-links">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="rightBox">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="mui-clearfix right-nav">
+                    <li><a href="#"><img src="images/brand1.png" alt=""><p>耐克</p></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--尾部-->
+<nav class="mui-bar mui-bar-tab my-footer">
+    <a href="index.html" class="mui-tab-item">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a href="category.html" class="mui-tab-item  mui-active">
+        <span class="mui-icon mui-icon-bars"></span>
+        <span class="mui-tab-label">分类</span>
+    </a>
+    <a href="cart.html" class="mui-tab-item">
+        <span class="mui-icon fa fa-shopping-cart"></span>
+        <span class="mui-tab-label">购物车</span>
+    </a>
+    <a href="user.html" class="mui-tab-item">
+        <span class="mui-icon mui-icon-person"></span>
+        <span class="mui-tab-label">会员中心</span>
+    </a>
+</nav>
+
+<!--存放artTemplate模板-->
+<script id="category-first" type="text/template">
+    <% for (var i=0; i<request.length; i++) { %>
+        <li class="<%= i==0? 'active':'' %>">
+            <a href="#" data-id="<%=request[i].id %>">
+                <%=request[i].categoryName %>
+            </a>
+        </li>
+    <% } %>
+</script>
+
+<script id="category-last" type="text/template">
+    <% for (var i=0; i<rows.length; i++) { %>
+        <li>
+            <a href="#">
+                <img src="<%=rows[i].brandLogo %>" alt="">
+                <p><%=rows[i].brandName %></p>
+            </a>
+        </li>
+    <% } %>
+
+    <% if(!rows.length) { %>
+        <div class="category-nodata">暂无数据</div>
+    <% } %>
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/zepto/fx.js"></script>
+<script src="lib/zepto/selector.js"></script>
+<script src="lib/zepto/touch.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-native.js"></script>
+<script src="js/index.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>

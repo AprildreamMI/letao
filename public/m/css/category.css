@@ -1,0 +1,68 @@
+.my-content  {
+    position: absolute;
+    left: 0px;
+    top: 44px;
+    bottom: 50px;
+    width: 100%;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.my-content .leftBox,.my-content .rightBox {
+    height: 100%;
+    position: relative;
+}
+.my-content .leftBox {
+    float: left;
+    width: 80px;
+}
+.my-content .rightBox {
+    margin-left: 90px;
+}
+
+/*左边链接*/
+.leftBox .left-links {
+    background-color: white;
+}
+.leftBox .left-links li {
+    display: block;
+}
+.leftBox .left-links li a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+.leftBox .left-links .active a {
+    background-color: #f5f5f5;
+    border-right: none;
+}
+/*右侧商品*/
+.rightBox ul {
+    margin-top: 10px;
+    background-color: white;
+}
+.rightBox ul li {
+    width: 33.333%;
+    float: left;
+}
+.rightBox ul li a {
+    display: block;
+    width: 100%;
+}
+.rightBox ul li a img {
+    display: block;
+    width: 100%;
+}
+.rightBox ul li a p {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.category-nodata {
+    position: absolute;
+    left: 50%;
+    top: 1000%;
+    transform: translate(-50%,-50%);
+}

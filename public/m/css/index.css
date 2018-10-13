@@ -1,0 +1,141 @@
+/*公共样式*/
+body,.nav-links,.brand,.product {
+    background-color: white;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: black;
+}
+ul {
+    list-style: none;
+}
+.mui-bar-nav~.my-content {
+    padding-bottom: 50px;
+    background-color: white;
+}
+
+
+/*顶部-头*/
+.my-header {
+    background-color: #006699;
+}
+.my-header a,.my-header h1 {
+    color: white;
+}
+
+/*底部-尾*/
+.my-footer {
+    background-color: #006699;
+}
+.my-footer .mui-tab-item {
+    color: white;
+}
+.my-footer .mui-tab-item.mui-active {
+    color: orange;
+}
+
+/*产品链接*/
+.nav-links {
+    width: 100%;
+    padding: 10px;
+}
+.nav-links a {
+    display: block;
+    width: 33.3333%;
+    float: left;
+}
+.nav-links a img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/*品牌专区*/
+.brand {
+    padding: 0 10px;
+}
+.brand>img {
+    width: 100%;
+}
+.brand ul {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+}
+.brand ul li {
+    width: 25%;
+    float: left;
+    padding: 10px 0;
+}
+.brand ul li a {
+    display: block;
+    width: 100%;
+}
+.brand ul li a img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/*运动生活专区*/
+.product {
+    width: 100%;
+    padding: 0 10px;
+}
+.product>img {
+    display: block;
+    width: 100%;
+}
+.product ul {
+    width: 100%;
+    list-style: none;
+    padding: 10px 0;
+}
+.product ul li {
+    display: block;
+    width: 50%;
+    padding: 0 5px;
+    float: left;
+    margin-bottom: 10px;
+}
+.product ul li a {
+    display: block;
+    width: 100%;
+    padding: 0 10px 10px 10px;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+}
+.product ul li a img {
+    width: 100%;
+}
+.product ul li a .p-name {
+    display: block;
+    padding: 0 10px 10px 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+.product ul li a p {
+    font-size: 12px;
+    text-align: center;
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+.product ul li a p span:first-child {
+    color: red;
+}
+.product ul li a p span:last-child {
+    color: #ccc;
+    text-decoration: line-through;
+}
+.product ul li a button {
+    width: 82px;
+    height: 33px;
+    background-color: #006699;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 auto 10px auto;
+}

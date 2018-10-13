@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐淘-移动端</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+    <!--头部-->
+    <header class="mui-bar mui-bar-nav my-header">
+        <a href="search-result.html" class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+        <h1 class="mui-title">商品详情页</h1>
+    </header>
+
+    <!--主体-->
+    <div class="mui-content my-content">
+        <div id="product-box">
+
+        </div>
+
+        <div class="num">
+            <div class="mui-pull-left">数量：</div>
+            <div class="mui-pull-left selectNum">
+                <span id="reduce">-</span>
+                <input type="text" value="1" id="inp">
+                <span id="increase">+</span>
+            </div>
+            <div class="mui-pull-left">剩余：44件</div>
+        </div>
+
+        <div class="btns">
+            <a href="cart.html">查看购物车</a>
+            <span id="addCart">加入购物车</span>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <nav class="mui-bar mui-bar-tab my-footer">
+        <a href="index.html" class="mui-tab-item mui-active">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a href="category.html" class="mui-tab-item">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a href="cart.html" class="mui-tab-item">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a href="user.html" class="mui-tab-item">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+
+    <script type="text/template" id="productTpl">
+
+        <div class="mui-slider">
+            <div class="mui-slider-group">
+                <% for(var i=0;i<pic.length;i++){ %>
+                <div class="mui-slider-item">
+                    <img src="<%=pic[i].picAddr %>"/>
+                </div>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="product-title">
+            <%=proName %>
+        </div>
+        <div class="price">
+            价格：
+            <span class="now">¥<%=price%></span>
+            <span class="old">¥<%=oldPrice%></span>
+        </div>
+        <div class="size">
+            尺码：
+            <% var size = size.split('-') %>
+            <!-- ["35","56"] -->
+            <% for(var i=size[0];i<=size[1];i++){ %>
+            <span><%=i %></span>
+            <% } %>
+        </div>
+    </script>
+
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/zepto/fx.js"></script>
+    <script src="lib/zepto/selector.js"></script>
+    <!--<script src="lib/zepto/touch.js"></script>-->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="lib/artTemplate/template-native.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+</html>

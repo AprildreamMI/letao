@@ -1,0 +1,20 @@
+.my-content {
+    position: absolute;
+    top: 44px;
+    left: 0px;
+    right: 0px;
+    bottom: 50px;
+    background-color: white;
+}
+.result-row {
+    height: 35px;
+    width: 92%;
+    margin: 10px auto 10px auto;
+    text-align: center;
+    line-height: 35px;
+    font-size: 14px;
+    background: #efeff4;
+}
+.result-row .mui-icon-arrowdown {
+    font-size: 13px;
+}
